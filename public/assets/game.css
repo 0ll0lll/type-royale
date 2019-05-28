@@ -1,0 +1,422 @@
+@import url(reset.css);
+
+:root {
+
+	--primary-color: #07FF20;
+	--secondary-color: #22a3ff;
+	--accent-color: #CD00FF;
+	--alert-color: #FF0771;
+}
+
+body {
+	background-color: black;
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+h1 {
+	margin: 0;
+	font-weight: 900;
+	font-style: italic;
+	font-size: 26pt;
+	text-transform: uppercase;
+}
+
+/*Main section*/
+#info-section {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#info-section .text {
+	font-weight: 600;
+	letter-spacing: .5px;
+}
+
+.section {
+	margin-right: 50px;
+}
+
+#main {
+	position: relative;
+	width: 55%;
+	padding: 30px;
+	padding-left: 60px;
+}
+
+.divider {
+	font-size: 10pt;
+	margin: 20px 0;
+}
+
+.title {
+	font-weight: normal;
+	font-size: 9pt;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+
+.description {
+	color: var(--color-grey);
+	font-style: normal;
+	text-shadow: none;
+	font-size: 10pt;
+	font-weight: normal;
+}
+
+/*items section*/
+
+.item .text {
+	line-height: 30px;
+	margin-left: 50px;
+	font-weight: 600;
+}
+
+.icon {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+    font-size: 10pt;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    position: relative;
+    color: white;
+	background-color: #8a58e4;
+	border: 2px solid black;
+	font-weight: 800;
+}
+
+/*Controls section*/
+#controls {
+	position: relative;
+	width: 75%;
+	padding: 60px 30px;
+	padding-bottom: 50px;
+	margin: 50px 0;
+	background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.15)
+}
+
+#nickname {
+	font-style: normal;
+	margin: 0;
+	color: black;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+#stats {
+	margin: 0 50px 20px 0;
+}
+
+.bar .text {
+	font-size: 10pt;
+	font-style: normal;
+	margin: 0;
+	color: #0000008a;
+}
+
+#stats-wrapper {
+	display: flex;
+	margin-top: 20px;
+}
+
+#health-bar, #shield-bar {
+	box-sizing: border-box;
+	width: 200px;
+	height: 16px;
+	line-height: 16px;
+	background-color: var(--primary-color);
+	color: black;
+	margin-bottom: 15px;
+	margin-top: 5px;
+}
+
+#shield-bar {
+	background-color: var(--secondary-color);
+}
+
+#inventory {
+	margin-top: -38px;
+}
+
+#inventory .text {
+	margin: 0 0 10px 0;
+	font-style: normal;
+	color: #0000008a;
+}
+
+#inventory .icon {
+	font-weight: 800;
+	margin: 10px 30px 10px 0;
+	color: white;
+	background-color: #8a58e4;
+	border: 2px solid black;
+}
+
+#inventory .icon .amount {
+	color: black;
+	font-weight: 500;
+	margin: 0;
+    position: absolute;
+    top: -18px;
+    left: 33px;
+}
+
+#input-box {
+	margin-top: 10px;
+	height: 44px;
+	position: relative;
+}
+
+#message::placeholder {
+	font-style: normal;
+	color: #ffffff78;
+	font-weight: normal;
+}
+
+#message, #action {
+	font-size: 12pt;
+	box-sizing: border-box;
+	border: 0;
+	outline: none;
+	height: 44px;
+	float: left;
+	padding: 0 20px;
+}
+
+#message {
+	background-color: black;
+	border-left: 10px solid #ffffff78;
+	border-right: 10px solid black;
+	width: calc(100% - 0pt);
+	color: var(--primary-color);
+	font-weight: 600;
+    letter-spacing: 1px;
+  	caret-color: #ffffff78;
+}
+
+#message:focus {
+	border-left: 10px solid var(--primary-color);
+}
+
+#action {
+	width: 0pt;
+	padding: 0;
+	background-color: var(--primary-color);
+	color: black;
+}
+
+#action:hover {
+	cursor: pointer;
+}
+
+#alert {
+	position: absolute;
+	box-sizing: border-box;
+	right: 0;
+	top: 0;
+	height: 44px;
+	line-height: 44px;
+    background-color: var(--alert-color);
+    color: white;
+    padding: 0 10px;
+    width: max-content;
+    display: none;
+}
+
+#alert .text {
+	margin: 0;
+	font-style: normal;
+}
+
+/*Timeline ssection*/
+#timeline {
+	background-color: rgba(0,0,0,0.8);
+	width: 30%;
+	position: relative;
+	right: -40px;
+	z-index: 1;
+	padding: 30px;
+	box-sizing: border-box;
+	overflow-y: scroll;
+	box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.45);
+}
+
+ #timeline .text {
+ 	font-style: normal;
+ 	font-size: 11pt;
+ 	letter-spacing: .5px;
+ 	line-height: 18px;
+ }
+
+ .command-text {
+ 	font-style: italic;
+ 	overflow-y: scroll; 
+ }
+
+/*Players section*/
+#players {
+	position: relative;
+	background: black;
+	background: linear-gradient(-70deg, black 0%, rgb(33, 33, 33) 100%);	
+	width: 15%;
+	z-index: 2;
+	right: -20px;
+	padding: 30px;
+	overflow-y: scroll; 
+	overflow-x: hidden; 
+}
+
+.player-name {
+	margin: 10px 0 5px 0;
+	font-size: 10pt;
+/*	user-select: none;*/
+	font-weight: 600;
+	letter-spacing: .5px;
+	color: var(--primary-color);
+}
+
+.player-name::selection {
+	background: var(--alert-color);
+	color: black;
+}
+
+.player-health, .player-shield {
+	color: var(--color-grey);
+	font-size: 7pt;
+	margin: 0;
+	color: white;
+}
+
+#main, #timeline, #players {
+	box-sizing: border-box;
+	height: 100%;
+	float: left;
+}
+
+#new-game, .btn {
+	background-color: var(--alert-color);
+    color: white;
+    padding: 4px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    top: 36px;
+    border: none;
+    outline: none;
+}
+
+.btn:hover, #new-game:hover {
+	background-color: var(--primary-color);
+	color: black;
+	cursor: pointer;
+}
+
+/*Victory*/
+
+#victory {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--primary-color);
+	border: 2px solid var(--primary-color);
+	box-shadow: 0px 0px 40px 0 var(--primary-color);
+	border-radius: 10px;
+	top: -2px;
+	left: -2px;
+	color: white;
+	text-align: center;
+	font-size: 40pt;
+	z-index: 1;
+	display: none;
+}
+
+#victory h2 {
+	margin: 90px 0 0 0;
+	font-weight: 900;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+#victory p {
+	margin: 20px 0 0 0;
+    font-size: 20pt;
+    color: black;
+    font-weight: 600;
+}
+
+#scene {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	left: -20%;
+	z-index: -1;
+}
+
+#bg {
+	z-index: -2;
+	width: 110%;
+}
+
+img	{
+	height: 100%;
+	width: 100%;
+}
+
+#info-container {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: -40px;
+	margin: auto;
+	height: 580px;
+	width: 590px;
+	border-radius: 10px;
+	border: 2px solid var(--primary-color);
+	background: black;
+	background: linear-gradient(-45deg, black 0%, rgb(33, 33, 33) 100%);
+	box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.45);
+	overflow: hidden;
+}
+
+#info {
+	background-image: url(images/info.png);
+	height: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#close {
+	right: 20px;
+	top: 20px;
+}
+
+#info-btn {
+	position: absolute;
+	bottom: 0;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+#info-btn:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+
+

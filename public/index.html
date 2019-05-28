@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Type Royale 🔫</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+		<link rel="stylesheet" href="/assets/index.css">
+	</head>
+	<body>
+		<div id="container">
+			<h1>Type <br> Royale</h1>
+			<p class="text" id="sub-line">Text based battle royale game where luck and speed determine everything.</p>
+			<div id="controls">
+				<p id="alert"></p>
+				<p class="text">Create a nickname</p>
+				<div id="input-box">
+					<input id="nickname" type="message" placeholder="type here">
+					<button id="ready">Ready</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="scene">
+  			<div class="o" data-depth="0.2"><img src="assets/images/pic1.png"></div>
+  			<div class="o" id="bg" data-depth="0.2"><img src="assets/images/pic2.png"></div>
+		</div>
+
+		<script src="assets/parallax.min.js"></script>
+		<script type="text/javascript">
+			var scene = document.getElementById('scene');
+			var parallaxInstance = new Parallax(scene);
+		</script>
+
+		<script src="assets/index.js"></script>
+	</body>
+</html>

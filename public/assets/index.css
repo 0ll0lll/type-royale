@@ -1,0 +1,121 @@
+@import url(reset.css);
+
+:root {
+	--primary-color: #07FF20;
+	--secondary-color: #0C6AFF;
+	--accent-color: #CD00FF;
+	--alert-color: #FF0771;
+}
+
+body {
+	background-color: black;
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#container {
+	width: 480px;
+	margin-top: -100px; 
+}
+
+h1 {
+	text-transform: uppercase;
+    font-weight: 900;
+    font-style: italic;
+	line-height: 60pt;
+    font-size: 6em;
+    margin-bottom: 18px;
+}
+
+#sub-line {
+	font-size: 12pt;
+	line-height: 22px;
+    letter-spacing: .5px;
+}
+
+#controls {
+	position: relative;
+	margin-top: 50px;
+	padding: 60px 30px;
+	padding-bottom: 30px;
+	/*background-color: rgba(255,255,255,.2);*/
+	background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.15)
+}
+
+#controls .text {
+	margin-top: 0;
+	color: #0000008a;
+}
+
+#input-box {
+	height: 44px;
+}
+
+#nickname::placeholder {
+	font-style: normal;
+	color: #ffffff78;
+}
+
+#nickname, #ready {
+	font-size: 12pt;
+	box-sizing: border-box;
+	border: 0;
+	outline: none;
+	height: 44px;
+	float: left;
+	padding: 0 20px;
+}
+
+#nickname {
+	background-color: transparent;
+	/*border: 2px solid var(--secondary-color);*/
+	width: calc(100% - 100pt);
+	color: var(--primary-color);
+	font-weight: normal;
+	background-color: black;
+}
+
+#ready {
+	width: 100pt;
+	padding: 0;
+	background-color: var(--primary-color);
+	color: black;
+}
+
+#ready:hover {
+	cursor: crosshair;
+}
+
+#alert {
+	position: absolute;
+	top: 10px;
+	color: var(--alert-color);
+	font-size: 12pt;
+}
+
+#scene {
+	display: flex;
+	height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	left: -20%;
+	z-index: -1;
+}
+
+#bg {
+	z-index: -2;
+}
+
+img	{
+	height: 130%;
+	width: 130%;
+}

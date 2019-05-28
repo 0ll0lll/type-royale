@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Type Royale 🔫</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+		<link rel="stylesheet" href="assets/game.css">
+	</head>
+	<body>
+		<div id="main">
+			<h1>Type Royale</h1>
+			<a class="btn" id="new-game" href="/">Restart...</a>
+			<div id="controls">
+				<p class="text" id="nickname"></p>
+				
+				<div id="stats-wrapper">
+					<div id="stats">
+						<div class="bar">
+							<p class="text">health</p>
+							<div class="text" id="health-bar">200/200</div>
+						</div>
+						<div class="bar">
+							<p class="text">shield</p>
+							<div class="text" id="shield-bar">200/200</div>
+						</div>
+					</div>
+					<div id="inventory">
+						<p class="text">inventory</p>
+					</div>
+				</div>
+				<div id="input-box">
+					<input id="message" type="message" placeholder="type here">
+					<button id="action"></button>
+					<div id="alert"></div>
+				</div>
+				<div id="victory">
+					<h2>Victory</h2>
+					<p>✨ Good Job! ✨</p>
+				</div>
+			</div>
+			<div id="info-section">
+				<div class="section" id="actions">
+					<h2 class="title">/ / / Actions / / /</h2>
+					<p class="text">loot<span class="description"> – gives a chance to find loot</span></p>
+					<p class="text">attack<span class="description"> – combine whith a nickname to damage</span></p>
+					<p class="text">use<span class="description"> – restores your health or shield</span></p>
+				</div>
+				<div class="section" id="items">
+					<h2 class="title">/ / / Items / / /</h2>
+					<div class="item">
+						<div class="icon">SG</div>
+						<p class="text">shotgun<span class="description"> – damage: 50</span></p>
+					</div>
+					<div class="item">
+						<div class="icon">R</div>
+						<p class="text">rifle<span class="description"> – damage: 85</span></p>
+					</div>
+					<div class="item">
+						<div class="icon">P</div>
+						<p class="text">pistol<span class="description"> – damage: 15</span></p>
+					</div>
+					<div class="item">
+						<div class="icon">S</div>
+						<p class="text">shield<span class="description"> – restores: 25 shield</span></p>
+					</div>
+					<div class="item">
+						<div class="icon">M</div>
+						<p class="text">medkit<span class="description"> – restores: 50 health</span></p>
+					</div>
+				</div>
+				<!-- <div class="section" id="example">
+					<h2 class="title">/ / / Example / / /</h2>
+					<p class="text">attack %nickname% shotgun</p>
+					<p class="text">use medkit</p>
+				</div> -->
+			</div>
+			<div id="info-container">
+				<button id="close" class="btn">Got it</button>
+				<div id="info"></div>
+			</div>
+			<p id="info-btn">info</p>
+		</div>
+		<div id="timeline">
+			<h2 class="title">Timeline</h2>
+			<div id="timeline-text">
+			
+			</div>
+		</div>
+		<div id="players">
+			<h2 class="title">players</h2>
+			<div id="playersList">
+
+			</div>
+		</div>
+
+		<div id="scene">
+  			<div class="o" data-depth="0.2"><img src="assets/images/pic1.png"></div>
+  			<div class="o" id="bg" data-depth="0.2"><img src="assets/images/pic2.png"></div>
+		</div>
+
+		<script src="assets/parallax.min.js"></script>
+		<script type="text/javascript">
+			var scene = document.getElementById('scene');
+			var parallaxInstance = new Parallax(scene);
+		</script>
+		
+		<script src="assets/game.js"></script>
+	</body>
+</html>
